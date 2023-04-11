@@ -1,0 +1,16 @@
+<div class="center-screen">
+  <div *ngFor="let c of corsi"></div>
+
+  <mat-list>
+    <div mat-subheader>
+      <h2>Corsi disponibili:</h2>
+    </div>
+    <mat-list-item *ngFor="let c of corsi">
+      <mat-icon matListItemIcon>
+        <a [routerLink]="['/corsi-detail', c.id]">visibility</a>
+      </mat-icon>
+      <div matListItemTitle>{{ c.titolo }}</div>
+      <div matListItemLine>Data di partenza: {{ c.data_partenza }}</div>
+    </mat-list-item>
+  </mat-list>
+</div>
